@@ -49,7 +49,12 @@ submit.addEventListener("click", () => {
     textArray[2].innerHTML = "";
   } else {
     status = false;
-    textArray[2].innerHTML = "非大一新生请投简历到邮箱";
+    if (bornYear.length == 0) {
+      textArray[2].innerHTML = "请选择出生日期";
+    }else{
+      textArray[2].innerHTML = "非大一新生请投简历到邮箱";
+    }
+  
   }
   //电话检测
   const phoneValue = phone.value;
